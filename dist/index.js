@@ -24,9 +24,9 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const CorsOptions = {
-    origin: "*",
+    origin: process.env.FRONTEND_URL,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ["Content", "Authorization"]
+    // allowedHeaders: ["Content", "Authorization"]
 };
 app.use((0, cors_1.default)(CorsOptions));
 app.get("/", (req, res) => {
