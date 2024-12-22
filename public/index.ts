@@ -13,7 +13,7 @@ const app = express()
 app.use(express.json())
 
 const CorsOptions = {
-    origin: process.env.FRONTEND_URL,
+    origin: "*" ,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ["Content", "Authorization"]
 }
